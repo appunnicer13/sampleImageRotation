@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+  <canvas id="canvas"  style="border:1px solid; width: 800px; height: 600px;">
+      Sorry your browser does not support canvas
+  </canvas>
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext('2d');
+    canvas.width = canvas.scrollWidth;
+    canvas.height = canvas.scrollHeight;
+    ctx.fillStyle = "pink";
+    ctx.fillRect(10,10,100,100);
+    ctx.strokeStyle = "red";
+    ctx.strokeRect(120,120,100,100);
+
+    ctx.fillStyle = 'blue';
+    ctx.beginPath();
+    ctx.arc(170,60,50,0,Math.PI*2);
+    ctx.fill();
+
+    ctx.strokeStyle = 'purple';
+    ctx.beginPath();
+    ctx.arc(290,60,50,0,Math.PI*2);
+    ctx.stroke();
+
+    ctx.fillStyle = 'green';
+    ctx.beginPath();
+    ctx.arc(390,60,50,0,Math.PI/2);
+    ctx.lineTo(390,60);
+    ctx.fill();
+
+</script>
+</body>
+</html>
